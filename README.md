@@ -1,18 +1,48 @@
-Jupyter Notebook을 탈출하고 싶으신 분들을 돕고자 간단히 만들어본 딥러닝 프로젝트입니다.  
-아래 설명을 따라 간편하게 따라해보실 수 있습니다.
+# Beyond Jupyter - Deep Learning Project Template
 
-- 이 프로젝트를 클론 하기
+> A template for transitioning from Jupyter Notebooks to production-ready Python code
+
+## Overview
+
+A project template for those who want to move beyond Jupyter Notebooks to structured Python projects. Uses CIFAR-10 image classification as an example to demonstrate production-level code organization.
+
+## Key Features
+
+- **Modular Structure**: Separated datasets, models, training modules
+- **CIFAR-10 Example**: Ready-to-run image classification
+- **CLI-based Execution**: Simple command-line training
+- **Extensible**: Easy to swap datasets and models
+
+## Quick Start
+
 ```bash
-git clone https://github.com/kwanghoum/beyond_jupyter.git
-cd beyond_jupyter
+git clone https://github.com/Chancecatch1/temp.git
+cd temp
+python datasets.py   # Download dataset
+python main.py       # Start training
 ```
 
-- 데이터셋 구성하기(CIFAR-10 데이터셋을 활용합니다.)
-```bash
-python datasets.py
+## Project Structure
+
+```
+temp/
+├── main.py         # Main execution script
+├── models.py       # Model architecture definitions
+├── datasets.py     # Dataset loading and preprocessing
+└── training.py     # Training loop and utilities
 ```
 
-- 모델 돌리기
-```bash
-python main.py
-```
+## Tech Stack
+
+- Python 3.8+
+- PyTorch
+- torchvision (CIFAR-10)
+
+## Why This Template?
+
+| Jupyter Notebook | This Template |
+|-----------------|---------------|
+| Cell-by-cell execution | Module-based execution |
+| Global state issues | Clear function/class structure |
+| Reproducibility issues | Consistent CLI execution |
+| Version control challenges | Git-friendly structure |
